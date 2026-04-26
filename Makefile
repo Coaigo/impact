@@ -66,6 +66,13 @@ verify:
 install:
 	@echo "Installing impact CLI..."
 	@mkdir -p ~/.impact
+	@if [ ! -f ../.stage0-launch.yaml ]; then \
+		PRODUCT_SLUG=$$(basename "$$(cd .. && pwd)"); \
+		echo "umbrella: $$PRODUCT_SLUG" > ../.stage0-launch.yaml; \
+		echo "Created ../.stage0-launch.yaml with umbrella: $$PRODUCT_SLUG"; \
+	else \
+		echo "../.stage0-launch.yaml already exists"; \
+	fi
 	@if ! grep -q "Added by impact CLI install" ~/.zshrc 2>/dev/null; then \
 		echo "\n# Added by impact CLI install" >> ~/.zshrc; \
 		echo "export PATH=\$$PATH:~/.impact" >> ~/.zshrc; \
