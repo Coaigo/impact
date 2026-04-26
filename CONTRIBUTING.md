@@ -38,6 +38,7 @@ git config --global user.email yourname@example.com
 - **zsh shell** - Default on macOS. Linux: https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH
 - **Mongo Compass** - https://www.mongodb.com/docs/compass/install/
 - **WSL** - For Windows users: https://learn.microsoft.com/en-us/windows/wsl/install
+- **Cypress Testing Tool** - ``npm -g install cypress``
 
 ## Step 2 of 4 - Install the CLI
 Use these commands to install the Developer Edition ``im`` command line utility. 
